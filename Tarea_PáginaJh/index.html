@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguajes de Programación</title>
+    <!-- Icono de la página -->
+    <link rel="icon" href="img/1.ico">
+    <!-- Fuentes de la página de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <!-- CSS de la página -->
+    <style>
+        *{
+            font-family: 'Kanit', sans-serif;
+            font-family: 'Roboto', sans-serif;
+        }
+        .c{
+            margin-top: -70px;
+        }
+        .tarjeta-container {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tarjeta {
+            margin: 65px 60px;
+            width: 50%;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+        .tarjeta:hover {
+        background-color: rgb(87, 62, 116);
+        transition: 1.5s;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    
+    <center>
+    <header>
+        <!-- Titulo  -->
+        <h1>¡Conoce los lenguajes de programación aquí!</h1>
+        <!-- Navegador de la página -->
+          <nav>
+            <a href="https://www.w3schools.com/" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #3e0a68e0; color: #fff; text-decoration: none; border-radius: 5px;">Haz click aquí para saber más</a>
+            <br><br>
+            <!-- Creo un link para utilizar "onclick" y llamar a la función de JavaScript -->
+            <a href="#" id="nv" onclick="crearIframe()"  style="display: inline-block; padding: 10px 20px; background-color: #f4f0f7e0; color: #fff; text-decoration: none; border-radius: 5px; color:black">¿Qué son los lenguajes de programación? Click aquí</a>
+            <!-- Abro el Script para crear la función crear iframe y así, mediante el click en la etiqueta <a>
+            creo un iframe, para que no estorbe siempre en la página -->
+            <script>
+        var ifram = false; // variable declarada fuera de la función
+            function crearIframe() {
+            if (!ifram) { // verifica si ifram es falso
+             var iframe = document.createElement("iframe");
+             iframe.src = "https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n";
+             iframe.width = "100%";
+             iframe.height = "300px"
+             iframe.style.padding = "15px"; // agrega el padding al iframe
+             iframe.style.boxSizing = "border-box";
+             iframe.frameBorder = "0";
+             iframe.allowFullscreen = true;
+             var nav = document.getElementById("nv");
+            nav.appendChild(iframe);
+            ifram = true; // establece ifram en verdadero
+    }
+  }
+            </script>
+        </nav>
+    </center>
+    </header>
+    <main>
+    <!-- Articulo número 1 con 3 secciones -->
+    <article class="tarjeta-container">
+            <!-- Primera sección -->
+            <section class="tarjeta" onclick="window.open('https://www.w3schools.com/js/default.asp', '_blank')">
+                <img src="img/javascript_logo.png" alt="Imagen de la tarjeta">
+                <h2>JavaScript</h2>
+                <p>JavaScript es un lenguaje de programación que permite crear interactividad en páginas</p>
+            </section>
+            <!-- Segunda sección -->
+            <section class="tarjeta" onclick="window.open('https://www.w3schools.com/python/default.asp', '_blank')">
+                <img src="img/python_logo.png" alt="Imagen de la tarjeta">
+                <h2>Python</h2>
+                <p>Lenguaje de programación versátil y fácil de aprender, útil en análisis de datos y automatización </p>
+            <!-- Tercera sección -->
+            </section>
+            <section class="tarjeta" onclick="window.open('https://www.w3schools.com/java/default.asp', '_blank')">
+                <img src="img/java_logo.png" alt="Imagen de la tarjeta">
+                <h2>Java</h2>
+                <p> Lenguaje de programación popular para desarrollo de aplicaciones empresariales y Android</p>
+            </section>
+        
+    </article>
+    <!-- Articulo número 2 con 3 secciones -->
+    <article class="tarjeta-container c">
+        <!-- Articulo número 2/ Primera sección -->
+        <section class="tarjeta" onclick="window.open('https://www.w3schools.com/php/default.asp', '_blank')">
+            <img src="img/php_logo.png" alt="Imagen de la tarjeta">
+            <h2>Php</h2>
+            <p>Lenguaje de programación para la web que permite crear páginas dinámicas y conectar con bases de datos </p>
+        </section>
+        <!-- Articulo número 2/ Segunda sección -->
+        <section class="tarjeta" onclick="window.open('https://www.programarya.com/Cursos/C++', '_blank')">
+            <img src="img/C++_logo.png" alt="Imagen de la tarjeta">
+            <h2>C++</h2>
+            <p> Lenguaje de programación de bajo nivel usado para sistemas operativos, videojuegos y aplicaciones de alto rendimiento   </p>
+        </section>
+        <!-- Articulo número 2/ Tercera sección -->
+        <section class="tarjeta" onclick="window.open('https://learn.microsoft.com/es-es/dotnet/csharp/tour-of-csharp/tutorials/', '_blank')">
+            <img src="img/c_logo.png" alt="Imagen de la tarjeta">
+            <h2>C#</h2>
+            <p>Lenguaje de programación orientado a objetos para desarrollo de aplicaciones de escritorio, web y móviles en .NET</p>
+        </section>
+    
+    </article>
+    </main>
+    <!-- Footer de la página -->
+    <footer style="background-color: #3e0a68e0; padding: 10px" >
+        <center>
+        <h3>Elaborado por Jhon Ochoa Caro</h3>
+        <p>Copyright © 2023. Todos los derechos reservados.</p>
+        </center>
+      </footer>
+      
+</body>
+</html>
